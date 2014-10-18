@@ -1,4 +1,3 @@
 ITWS6963-SoftwareDevelopment
 ============================
-
-For final projects
+This is a  repository for final project.
