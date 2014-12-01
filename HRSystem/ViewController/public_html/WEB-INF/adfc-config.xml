@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="DeptEmpPage">
+    <page>/DeptEmpPage.jspx</page>
+  </view>
+  <view id="query">
+    <page>/query.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">DeptEmpPage</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">*goQuery</from-outcome>
+      <to-activity-id id="__3">query</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__6">
+    <from-activity-id id="__7">query</from-activity-id>
+    <control-flow-case id="__9">
+      <from-outcome id="__10">*back</from-outcome>
+      <to-activity-id id="__8">DeptEmpPage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>
