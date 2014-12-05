@@ -1,23 +1,71 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <view id="DeptEmpPage">
-    <page>/DeptEmpPage.jspx</page>
+    <page>/DeptEmpPage.jsf</page>
   </view>
   <view id="query">
-    <page>/query.jspx</page>
+    <page>/query.jsf</page>
+  </view>
+  <view id="login">
+    <page>/login.jsf</page>
+  </view>
+  <view id="registration">
+    <page>/registration.jsf</page>
+  </view>
+  <view id="unauthorized">
+    <page>/unauthorized.jsf</page>
+  </view>
+  <view id="regFailed">
+    <page>/regFailed.jsf</page>
   </view>
   <control-flow-rule id="__1">
-    <from-activity-id id="__2">DeptEmpPage</from-activity-id>
-    <control-flow-case id="__4">
-      <from-outcome id="__5">*goQuery</from-outcome>
-      <to-activity-id id="__3">query</to-activity-id>
+    <from-activity-id>DeptEmpPage</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>goQuery</from-outcome>
+      <to-activity-id>query</to-activity-id>
     </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__6">
-    <from-activity-id id="__7">query</from-activity-id>
     <control-flow-case id="__9">
-      <from-outcome id="__10">*back</from-outcome>
-      <to-activity-id id="__8">DeptEmpPage</to-activity-id>
+      <from-outcome>logout</from-outcome>
+      <to-activity-id>login</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>query</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>back</from-outcome>
+      <to-activity-id>DeptEmpPage</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__7">
+    <from-activity-id>login</from-activity-id>
+    <control-flow-case id="__8">
+      <from-outcome>login</from-outcome>
+      <to-activity-id>DeptEmpPage</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__13">
+      <from-outcome>failed</from-outcome>
+      <to-activity-id>unauthorized</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__5">
+    <from-activity-id>registration</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>registered</from-outcome>
+      <to-activity-id>login</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__10">
+      <from-outcome>failed</from-outcome>
+      <to-activity-id>regFailed</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__12">
+    <managed-bean-name>loginBean</managed-bean-name>
+    <managed-bean-class>demo.view.LoginValidation</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__15">
+    <managed-bean-name>registrationBean</managed-bean-name>
+    <managed-bean-class>demo.view.RegistrationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

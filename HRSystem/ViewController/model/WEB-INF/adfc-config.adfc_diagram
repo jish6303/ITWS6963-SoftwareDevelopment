@@ -7,30 +7,32 @@
       <property
          name="activityId">DeptEmpPage</property>
       <property
-         name="page">/DeptEmpPage.jspx</property>
+         name="page">/DeptEmpPage.jsf</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>DeptEmpPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
+         name="thumbnailExpanded">false</property>
+      <property
          name="exceptionHandler">false</property>
       <property
-         name="y">185.79883</property>
+         name="y">127.99414</property>
       <property
-         name="x">153.02344</property>
+         name="x">78.02344</property>
    </View>
    <View
       id="View3">
       <property
          name="activityId">query</property>
       <property
-         name="page">/query.jspx</property>
+         name="page">/query.jsf</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>query&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">196.29883</property>
+         name="y">126.896484</property>
       <property
-         name="x">318.0</property>
+         name="x">246.0</property>
    </View>
    <ControlFlowCase
       islink="true"
@@ -38,9 +40,9 @@
       from="View2"
       to="View3">
       <property
-         name="fromOutcome">*goQuery</property>
+         name="fromOutcome">goQuery</property>
       <property
-         name="sdm:polyPoints">R46,194.46457,181.94824,277.0,192.44824,L46</property>
+         name="sdm:polyPoints">R46,119.02344,124.143555,204.9553,123.0459,L46</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -48,8 +50,118 @@
       from="View3"
       to="View2">
       <property
-         name="fromOutcome">*back</property>
+         name="fromOutcome">back</property>
       <property
-         name="sdm:polyPoints">L54,276.55768,199.44824,194.02344,188.94824,R54</property>
+         name="sdm:polyPoints">L54,205.0,130.0459,119.06812,131.14355,R54</property>
+   </ControlFlowCase>
+   <View
+      id="View8">
+      <property
+         name="activityId">login</property>
+      <property
+         name="page">/login.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>login&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">277.79883</property>
+      <property
+         name="x">218.5</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase10"
+      from="View8"
+      to="View2">
+      <property
+         name="fromOutcome">login</property>
+      <property
+         name="sdm:polyPoints">L50,174.78532,277.44824,74.52344,184.69774,B44</property>
+   </ControlFlowCase>
+   <View
+      id="View15">
+      <property
+         name="activityId">registration</property>
+      <property
+         name="page">/registration.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>registration&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">158.79883</property>
+      <property
+         name="x">476.5</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase16"
+      from="View15"
+      to="View8">
+      <property
+         name="fromOutcome">registered</property>
+      <property
+         name="sdm:polyPoints">L50,435.5,158.44824,259.5,277.44824,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase15"
+      from="View2"
+      to="View8">
+      <property
+         name="fromOutcome">logout</property>
+      <property
+         name="sdm:polyPoints">B56,81.52344,181.64355,177.5,270.44824,L42</property>
+   </ControlFlowCase>
+   <View
+      id="View16">
+      <property
+         name="activityId">unauthorized</property>
+      <property
+         name="page">/unauthorized.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>unauthorized&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">331.59766</property>
+      <property
+         name="x">105.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase17"
+      from="View8"
+      to="View16">
+      <property
+         name="fromOutcome">failed</property>
+      <property
+         name="sdm:polyPoints">L58,177.5,284.44824,146.0,331.24707,R50</property>
+   </ControlFlowCase>
+   <View
+      id="View17">
+      <property
+         name="activityId">regFailed</property>
+      <property
+         name="page">/regFailed.jsf</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>regFailed&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">335.09766</property>
+      <property
+         name="x">443.5</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase18"
+      from="View15"
+      to="View17">
+      <property
+         name="fromOutcome">failed</property>
+      <property
+         name="sdm:polyPoints">B50,476.5,212.44824,443.5,280.74707,T50</property>
    </ControlFlowCase>
 </SDM>

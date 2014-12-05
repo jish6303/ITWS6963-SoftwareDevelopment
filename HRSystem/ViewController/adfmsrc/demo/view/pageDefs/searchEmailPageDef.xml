@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
-                version="11.1.1.64.93" id="searchEmailPageDef"
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.59.47" id="searchEmailPageDef"
                 Package="demo.view.pageDefs">
   <parameters/>
   <executables>
     <variableIterator id="variables">
-      <variableUsage DataControl="AppModuleDataControl"
-                     Binds="EmpByEmail1.variablesMap.p_email"
+      <variableUsage DataControl="AppModuleDataControl" Binds="EmpByEmail1.variablesMap.p_email"
                      Name="ExecuteWithParams_p_email" IsQueriable="false"/>
     </variableIterator>
-    <iterator Binds="EmpByEmail1" RangeSize="25"
-              DataControl="AppModuleDataControl" id="EmpByEmail1Iterator"/>
+    <iterator Binds="EmpByEmail1" RangeSize="25" DataControl="AppModuleDataControl" id="EmpByEmail1Iterator"/>
   </executables>
   <bindings>
-    <action IterBinding="EmpByEmail1Iterator" id="ExecuteWithParams"
-            RequiresUpdateModel="true" Action="executeWithParams">
-      <NamedData NDName="p_email" NDType="java.lang.String"
-                 NDValue="${bindings.ExecuteWithParams_p_email}"/>
+    <action IterBinding="EmpByEmail1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true"
+            Action="executeWithParams">
+      <NamedData NDName="p_email" NDType="java.lang.String" NDValue="${bindings.ExecuteWithParams_p_email}"/>
     </action>
     <attributeValues IterBinding="variables" id="p_email">
       <AttrNames>
