@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LoginView"
+  Version="11.1.2.60.81"
+  SelectList="Login.EMAILID, 
+       Login.PASSWORD, 
+       Login.SECURITYQUESTION, 
+       Login.SECURITYANSWER, 
+       Login.FIRSTNAME, 
+       Login.LASTNAME, 
+       Login.JOBROLE"
+  FromList="LOGIN Login"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="Login"
+    Entity="demo.model.Login"/>
+  <ViewAttribute
+    Name="Emailid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Emailid"
+    EntityUsage="Login"
+    AliasName="EMAILID"/>
+  <ViewAttribute
+    Name="Password"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Password"
+    EntityUsage="Login"
+    AliasName="PASSWORD"/>
+  <ViewAttribute
+    Name="Securityquestion"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Securityquestion"
+    EntityUsage="Login"
+    AliasName="SECURITYQUESTION"/>
+  <ViewAttribute
+    Name="Securityanswer"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Securityanswer"
+    EntityUsage="Login"
+    AliasName="SECURITYANSWER"/>
+  <ViewAttribute
+    Name="Firstname"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Firstname"
+    EntityUsage="Login"
+    AliasName="FIRSTNAME"/>
+  <ViewAttribute
+    Name="Lastname"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Lastname"
+    EntityUsage="Login"
+    AliasName="LASTNAME"/>
+  <ViewAttribute
+    Name="Jobrole"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Jobrole"
+    EntityUsage="Login"
+    AliasName="JOBROLE"/>
+</ViewObject>

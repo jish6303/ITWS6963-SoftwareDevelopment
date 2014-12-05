@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.60.81" id="registrationPageDef"
+                Package="demo.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="LoginView1" RangeSize="25" DataControl="AppModuleDataControl" id="LoginView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="LoginView1Iterator" id="Firstname">
+      <AttrNames>
+        <Item Value="Firstname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginView1Iterator" id="Lastname">
+      <AttrNames>
+        <Item Value="Lastname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginView1Iterator" id="Emailid">
+      <AttrNames>
+        <Item Value="Emailid"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginView1Iterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginView1Iterator" id="Securityanswer">
+      <AttrNames>
+        <Item Value="Securityanswer"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="LoginView1Iterator" id="CreateInsert" RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" InstanceName="AppModuleDataControl" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="commitTransaction"/>
+    <list IterBinding="LoginView1Iterator" id="Securityquestion" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="true">
+      <AttrNames>
+        <Item Value="Securityquestion"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="What is the name of your first school?"/>
+        <Item Value="What is the name of your pet?"/>
+        <Item Value="What is your father's middle name?"/>
+      </ValueList>
+    </list>
+    <list IterBinding="LoginView1Iterator" id="Jobrole" DTSupportsMRU="true" SelectItemValueMode="ListObject"
+          StaticList="true">
+      <AttrNames>
+        <Item Value="Jobrole"/>
+      </AttrNames>
+      <ValueList>
+        <Item Value="HR"/>
+      </ValueList>
+    </list>
+  </bindings>
+</pageDefinition>

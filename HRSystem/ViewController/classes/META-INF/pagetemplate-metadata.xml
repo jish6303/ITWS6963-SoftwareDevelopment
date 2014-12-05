@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<pageTemplateDefs xmlns="http://xmlns.oracle.com/adf/faces/rich/pagetemplate">
+  <pagetemplate-jsp-ui-def>/singleLong.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/single.jspx</pagetemplate-jsp-ui-def>
+  <pagetemplate-jsp-ui-def>/template_login.jspx</pagetemplate-jsp-ui-def>
+</pageTemplateDefs>

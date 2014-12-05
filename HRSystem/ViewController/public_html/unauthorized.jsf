@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="unauthorized.jsf" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/single.jspx" id="pt1">
+                <f:facet name="center">
+                    <af:panelGroupLayout id="pgl1" styleClass="AFStretchWidth"
+                                             inlineStyle="height:100%; width:100%; background-color:rgb(165,255,255);" layout="vertical">
+                            <af:spacer width="10" height="25" id="s1"/>
+                            <af:panelGroupLayout id="pgl2" layout="horizontal">
+                                <af:spacer width="400" height="10" id="s2"/>
+                                <af:panelStretchLayout id="psl1" bottomHeight="49px">
+                                    <f:facet name="bottom"/>
+                                    <f:facet name="center">                                
+                                            <af:panelGroupLayout id="pgl3" layout="vertical"
+                                                                 inlineStyle="height:30%; width:40%;">
+                                                <af:decorativeBox id="db1" topHeight="0px">
+                                                    <f:facet name="center">
+                                                        <af:panelGroupLayout layout="vertical" id="pgl5"
+                                                                             inlineStyle="height:inherit; background-color:inherit;">
+                                                    <af:spacer width="10" height="25" id="s7"/>
+                                                    <af:outputLabel value="Login failed: Please enter valid credentials and login again" id="ol1"
+                                                                    inlineStyle="color:Red; font-size:12pt; margin:0px 30px; padding:0px;"/>
+                                                    <af:spacer width="10" height="40" id="s3"/>
+                                                    <af:commandLink text="Login to HR System" id="cl1"
+                                                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:12pt; margin:0px 50px 0px;"
+                                                                    action="login"/>
+                                                    <af:spacer width="10" height="30" id="s4"/>
+                                                    <af:commandLink text="Register as a New User" id="cl2"
+                                                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:12pt; margin:0px 50px 0px;"
+                                                                    action="registration"/>
+                                                </af:panelGroupLayout>
+                                                    </f:facet>
+                                                </af:decorativeBox>
+                                    </af:panelGroupLayout>
+                                    </f:facet>
+                                    <f:facet name="start"/>
+                                    <f:facet name="end"/>
+                                    <f:facet name="top"/>
+                                </af:panelStretchLayout>
+                            </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:pageTemplateDef var="attrs" definition="private">
+        <af:xmlContent>
+            <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+                <display-name>singleLong</display-name>
+                <facet>
+                    <facet-name>center</facet-name>
+                </facet>
+            </component>
+        </af:xmlContent>
+        <af:panelStretchLayout topHeight="100px" startWidth="100px" endWidth="100px" bottomHeight="25px" id="pt_psl1"
+                               inlineStyle="background-color:rgb(173,173,0);">
+            <f:facet name="top">
+                <af:panelGroupLayout id="pt_pgl1" layout="vertical" styleClass="AFStretchWidth"
+                                     inlineStyle="width:100%; background-color:rgb(173,173,0);">
+                    <af:spacer width="10" height="25" id="pt_s1"/>
+                    <af:panelGroupLayout id="pt_pgl2" layout="horizontal"
+                                         inlineStyle="background-color:inherit;">
+                        <af:spacer width="10" height="10" id="pt_s2" inlineStyle="width:550px;"/>
+                        <af:outputLabel value="Welcome To HR System" id="pt_ol1"
+                                        inlineStyle="color:rgb(148,0,0); font-family:Arial, Helvetica, sans-serif; font-size:22pt; font-weight:bolder;"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="center">
+                <af:decorativeBox id="pt_db3"
+                                  inlineStyle="background-color:rgb(173,173,0); height:inherit; width:inherit;" topHeight="0px"
+                                  theme="contentBody">
+                    <f:facet name="center">
+                        <af:decorativeBox id="pt_db2"
+                                          inlineStyle="background-color:rgb(173,173,0); height:inherit; width:inherit;"
+                                          topHeight="0px" theme="contentBody">
+                            <f:facet name="center">
+                                <af:panelStretchLayout startWidth="100px" endWidth="100px" id="pt_psl2"
+                                                       inlineStyle="background-color:rgb(173,173,0); height:inherit; width:inherit;">
+                                    <f:facet name="center">
+                                        <af:decorativeBox theme="light" id="pt_db1" topHeight="0px"
+                                                          inlineStyle="height:inherit; width:inherit;">
+                                            <f:facet name="center">
+                                                <af:decorativeBox id="pt_db4" topHeight="0px"
+                                                                  inlineStyle="background-color:rgb(165,255,255); height:inherit; width:inherit;">
+                                                    <f:facet name="center">
+                                                        <af:facetRef facetName="center"/>
+                                                    </f:facet>
+                                                    <f:facet name="top"/>
+                                                </af:decorativeBox>
+                                            </f:facet>
+                                        </af:decorativeBox>
+                                    </f:facet>
+                                    <f:facet name="start"/>
+                                    <f:facet name="end"/>
+                                </af:panelStretchLayout>
+                            </f:facet>
+                        </af:decorativeBox>
+                    </f:facet>
+                </af:decorativeBox>
+            </f:facet>
+            <f:facet name="bottom"/>
+        </af:panelStretchLayout>
+    </af:pageTemplateDef>
+</jsp:root>
