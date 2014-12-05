@@ -4,17 +4,13 @@
 <ViewLink
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="EmpManagerFkLink"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   EntityAssociation="demo.model.EmpManagerFkAssoc">
-  <DesignTime>
-    <Attr Name="_isCodegen" Value="true"/>
-  </DesignTime>
   <ViewLinkDefEnd
     Name="ManagerIdEmployeesView"
     Cardinality="1"
-    Owner="demo.model.EmployeesView"
-    Source="true">
+    Source="true"
+    Owner="demo.model.EmployeesView">
     <DesignTime>
       <Attr Name="_finderName" Value="ManagerIdEmployeesView"/>
       <Attr Name="_isUpdateable" Value="true"/>

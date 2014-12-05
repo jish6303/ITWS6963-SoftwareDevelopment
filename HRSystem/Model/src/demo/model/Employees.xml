@@ -4,18 +4,13 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Employees"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   DBObjectType="table"
   DBObjectName="EMPLOYEES"
   AliasName="Employees"
   BindingStyle="OracleName"
   UseGlueCode="false"
   xmlns:validation="http://xmlns.oracle.com/adfm/validation">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access"/>
-    <AttrArray Name="_publishEvents"/>
-  </DesignTime>
   <Attribute
     Name="EmployeeId"
     IsNotNull="true"
@@ -23,14 +18,10 @@
     Scale="0"
     ColumnName="EMPLOYEE_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="EMPLOYEES"
-    PrimaryKey="true">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
-  </Attribute>
+    PrimaryKey="true"/>
   <Attribute
     Name="FirstName"
     Precision="20"
@@ -86,14 +77,11 @@
     Name="HireDate"
     IsNotNull="true"
     ColumnName="HIRE_DATE"
-    SQLType="TIMESTAMP"
-    Type="oracle.jbo.domain.Date"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Timestamp"
     ColumnType="DATE"
     TableName="EMPLOYEES">
     <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
     <Properties>
       <SchemaBasedProperties>
         <FMT_FORMATTER
@@ -122,12 +110,9 @@
     Scale="2"
     ColumnName="SALARY"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.math.BigDecimal"
     ColumnType="NUMBER"
     TableName="EMPLOYEES">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="10"/>
-    </DesignTime>
     <validation:RangeValidationBean
       Name="Salary_Rule_0"
       ResId="demo.model.Employees.Salary_Rule_0"
@@ -143,39 +128,27 @@
     Scale="2"
     ColumnName="COMMISSION_PCT"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="4"/>
-    </DesignTime>
-  </Attribute>
+    TableName="EMPLOYEES"/>
   <Attribute
     Name="ManagerId"
     Precision="6"
     Scale="0"
     ColumnName="MANAGER_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
-  </Attribute>
+    TableName="EMPLOYEES"/>
   <Attribute
     Name="DepartmentId"
     Precision="4"
     Scale="0"
     ColumnName="DEPARTMENT_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="5"/>
-    </DesignTime>
-  </Attribute>
+    TableName="EMPLOYEES"/>
   <AccessorAttribute
     Name="Departments"
     Association="demo.model.DeptMgrFkAssoc"
@@ -208,12 +181,10 @@
     Name="EmpEmailNn">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="EMP_EMAIL_NN"/>
-      <Attr Name="_checkCondition" Value='"EMAIL" IS NOT NULL'/>
+      <Attr Name="_checkCondition" Value="EMAIL IS NOT NULL"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Employees.Email"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmpEmailUk">
@@ -239,45 +210,37 @@
     Name="EmpHireDateNn">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="EMP_HIRE_DATE_NN"/>
-      <Attr Name="_checkCondition" Value='"HIRE_DATE" IS NOT NULL'/>
+      <Attr Name="_checkCondition" Value="HIRE_DATE IS NOT NULL"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Employees.HireDate"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmpJobNn">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="EMP_JOB_NN"/>
-      <Attr Name="_checkCondition" Value='"JOB_ID" IS NOT NULL'/>
+      <Attr Name="_checkCondition" Value="JOB_ID IS NOT NULL"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Employees.JobId"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmpLastNameNn">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="EMP_LAST_NAME_NN"/>
-      <Attr Name="_checkCondition" Value='"LAST_NAME" IS NOT NULL'/>
+      <Attr Name="_checkCondition" Value="LAST_NAME IS NOT NULL"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Employees.LastName"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmpSalaryMin">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="EMP_SALARY_MIN"/>
-      <Attr Name="_checkCondition" Value="salary > 0"/>
+      <Attr Name="_checkCondition" Value="SALARY > 0"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Employees.Salary"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmpDeptFk">

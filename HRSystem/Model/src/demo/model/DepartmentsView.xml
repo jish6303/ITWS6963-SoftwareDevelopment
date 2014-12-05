@@ -4,8 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="DepartmentsView"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   SelectList="Departments.DEPARTMENT_ID, 
        Departments.DEPARTMENT_NAME, 
        Departments.MANAGER_ID, 
@@ -15,9 +14,6 @@
   CustomQuery="false"
   PageIterMode="Full"
   UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
-  </DesignTime>
   <EntityUsage
     Name="Departments"
     Entity="demo.model.Departments"/>

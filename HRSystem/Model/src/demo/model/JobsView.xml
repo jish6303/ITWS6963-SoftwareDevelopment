@@ -4,23 +4,19 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="JobsView"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   BindingStyle="OracleName"
   CustomQuery="true"
   PageIterMode="Full"
   UseGlueCode="false">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
     <Attr Name="_isExpertMode" Value="true"/>
   </DesignTime>
-  <SQLQuery>
-    <![CDATA[SELECT Jobs.JOB_ID,
+  <SQLQuery><![CDATA[SELECT Jobs.JOB_ID,
        Jobs.JOB_TITLE,
        Jobs.MIN_SALARY,
        Jobs.MAX_SALARY
-FROM JOBS Jobs]]>
-  </SQLQuery>
+FROM JOBS Jobs]]></SQLQuery>
   <ViewAttribute
     Name="JobId"
     IsUpdateable="false"
@@ -60,15 +56,11 @@ FROM JOBS Jobs]]>
     PrecisionRule="true"
     Precision="6"
     Scale="0"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
     AliasName="MIN_SALARY"
     Expression="MIN_SALARY"
-    SQLType="NUMERIC">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
-  </ViewAttribute>
+    SQLType="NUMERIC"/>
   <ViewAttribute
     Name="MaxSalary"
     IsUpdateable="false"
@@ -76,15 +68,11 @@ FROM JOBS Jobs]]>
     PrecisionRule="true"
     Precision="6"
     Scale="0"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
     AliasName="MAX_SALARY"
     Expression="MAX_SALARY"
-    SQLType="NUMERIC">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
-  </ViewAttribute>
+    SQLType="NUMERIC"/>
   <AttrArray Name="KeyAttributes">
     <Item Value="JobId"/>
   </AttrArray>

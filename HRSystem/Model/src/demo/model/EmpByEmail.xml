@@ -4,8 +4,7 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="EmpByEmail"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   BindingStyle="OracleName"
   CustomQuery="true"
   PageIterMode="Full"
@@ -30,9 +29,7 @@
       </SchemaBasedProperties>
     </Properties>
   </Variable>
-  <SQLQuery>
-    <![CDATA[select first_name,last_name from employees where email=:p_email]]>
-  </SQLQuery>
+  <SQLQuery><![CDATA[select first_name,last_name from employees where email=:p_email]]></SQLQuery>
   <ViewAttribute
     Name="FirstName"
     IsUpdateable="false"
@@ -52,7 +49,6 @@
     Name="LastName"
     IsUpdateable="false"
     IsPersistent="false"
-    IsNotNull="true"
     PrecisionRule="true"
     Precision="25"
     Type="java.lang.String"

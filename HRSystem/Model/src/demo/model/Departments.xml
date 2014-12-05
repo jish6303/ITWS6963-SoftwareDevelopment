@@ -4,17 +4,12 @@
 <Entity
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Departments"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   DBObjectType="table"
   DBObjectName="DEPARTMENTS"
   AliasName="Departments"
   BindingStyle="OracleName"
   UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access"/>
-    <AttrArray Name="_publishEvents"/>
-  </DesignTime>
   <Attribute
     Name="DepartmentId"
     IsNotNull="true"
@@ -22,14 +17,10 @@
     Scale="0"
     ColumnName="DEPARTMENT_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
     TableName="DEPARTMENTS"
-    PrimaryKey="true">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="5"/>
-    </DesignTime>
-  </Attribute>
+    PrimaryKey="true"/>
   <Attribute
     Name="DepartmentName"
     IsNotNull="true"
@@ -49,26 +40,18 @@
     Scale="0"
     ColumnName="MANAGER_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="DEPARTMENTS">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="7"/>
-    </DesignTime>
-  </Attribute>
+    TableName="DEPARTMENTS"/>
   <Attribute
     Name="LocationId"
     Precision="4"
     Scale="0"
     ColumnName="LOCATION_ID"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.Integer"
     ColumnType="NUMBER"
-    TableName="DEPARTMENTS">
-    <DesignTime>
-      <Attr Name="_DisplaySize" Value="5"/>
-    </DesignTime>
-  </Attribute>
+    TableName="DEPARTMENTS"/>
   <AccessorAttribute
     Name="Employees"
     Association="demo.model.DeptMgrFkAssoc"
@@ -97,12 +80,10 @@
     Name="DeptNameNn">
     <DesignTime>
       <Attr Name="_DBObjectName" Value="DEPT_NAME_NN"/>
-      <Attr Name="_checkCondition" Value='"DEPARTMENT_NAME" IS NOT NULL'/>
+      <Attr Name="_checkCondition" Value="DEPARTMENT_NAME IS NOT NULL"/>
       <Attr Name="_isCheck" Value="true"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="demo.model.Departments.DepartmentName"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="DeptLocFk">

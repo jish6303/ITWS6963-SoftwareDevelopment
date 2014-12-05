@@ -4,11 +4,11 @@
 <ViewObject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="EmpDetails"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.59.47"
   SelectList="Employees.EMPLOYEE_ID, 
        Employees.FIRST_NAME, 
        Employees.LAST_NAME, 
+       Employees.EMAIL, 
        Employees.SALARY, 
        Employees.HIRE_DATE, 
        Employees.JOB_ID, 
@@ -20,9 +20,6 @@
   CustomQuery="false"
   PageIterMode="Full"
   UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
-  </DesignTime>
   <Properties>
     <SchemaBasedProperties>
       <LABEL
@@ -37,8 +34,8 @@
     Name="LOV_JobId"
     ListVOName="JobsView1"
     ListRangeSize="-1"
-    NullValueFlag="start"
-    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
     MRUCount="0">
     <AttrArray Name="AttrNames">
       <Item Value="JobId"/>
@@ -53,8 +50,7 @@
   </ListBinding>
   <EntityUsage
     Name="Employees"
-    Entity="demo.model.Employees"
-    DeleteParticipant="false"/>
+    Entity="demo.model.Employees"/>
   <EntityUsage
     Name="Departments"
     Entity="demo.model.Departments"
@@ -95,6 +91,14 @@
     EntityUsage="Employees"
     AliasName="LAST_NAME"/>
   <ViewAttribute
+    Name="Email"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Email"
+    EntityUsage="Employees"
+    AliasName="EMAIL"/>
+  <ViewAttribute
     Name="Salary"
     PrecisionRule="true"
     EntityAttrName="Salary"
@@ -118,7 +122,7 @@
     <Properties>
       <SchemaBasedProperties>
         <CONTROLTYPE
-          Value="choice"/>
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
@@ -137,15 +141,18 @@
     EntityUsage="Departments"
     AliasName="DEPARTMENT_NAME"/>
   <ViewAttribute
-    Name="YearlySalary"
+    Name="AnnualSalary"
     IsUpdateable="false"
     IsSelected="false"
     IsPersistent="false"
     PrecisionRule="true"
-    Type="java.lang.String"
-    ColumnType="VARCHAR2"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
     AliasName="VIEW_ATTR"
-    SQLType="VARCHAR"/>
+    SQLType="NUMERIC">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[Salary * 12]]></TransientExpression>
+  </ViewAttribute>
   <AttrArray Name="KeyAttributes">
     <Item Value="EmployeeId"/>
   </AttrArray>

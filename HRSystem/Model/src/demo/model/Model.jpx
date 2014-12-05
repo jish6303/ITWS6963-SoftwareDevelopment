@@ -4,11 +4,12 @@
 <JboProject
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="Model"
-  Version="11.1.1.64.93"
+  Version="11.1.2.60.81"
   SeparateXMLFiles="true"
   PackageName="demo.model">
   <DesignTime>
     <Attr Name="_jprName" Value="../../../Model.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_NamedConnection" Value="HRConn"/>
     <Attr Name="_appModuleNames0" Value="demo.model.AppModule"/>
   </DesignTime>

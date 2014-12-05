@@ -4,12 +4,8 @@
 <AppModule
   xmlns="http://xmlns.oracle.com/bc4j"
   Name="AppModule"
-  Version="11.1.1.64.93"
-  InheritPersonalization="true"
+  Version="11.1.2.60.81"
   ClearCacheOnRollback="true">
-  <DesignTime>
-    <Attr Name="_deployType" Value="0"/>
-  </DesignTime>
   <ViewUsage
     Name="DepartmentsView1"
     ViewObjectName="demo.model.DepartmentsView"/>
@@ -34,6 +30,12 @@
   <ViewUsage
     Name="EmpByEmail1"
     ViewObjectName="demo.model.EmpByEmail"/>
+  <ViewUsage
+    Name="LoginView1"
+    ViewObjectName="demo.model.LoginView"/>
+  <ViewUsage
+    Name="LoginView1_1"
+    ViewObjectName="demo.model.LoginView1"/>
   <ViewLinkUsage
     Name="DeptMgrFkLink1"
     ViewLinkObjectName="demo.model.DeptMgrFkLink"
