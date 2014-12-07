@@ -111,19 +111,23 @@
   </servlet>
   <servlet>
     <servlet-name>BIGRAPHSERVLET</servlet-name>
-    <servlet-class>oracle.adf.view.faces.bi.webapp.GraphServlet</servlet-class>
+    <servlet-class>oracle.adfinternal.view.faces.bi.renderkit.graph.GraphServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>BIGAUGESERVLET</servlet-name>
-    <servlet-class>oracle.adf.view.faces.bi.webapp.GaugeServlet</servlet-class>
+    <servlet-class>oracle.adfinternal.view.faces.bi.renderkit.gauge.GaugeServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>MapProxyServlet</servlet-name>
-    <servlet-class>oracle.adf.view.faces.bi.webapp.MapProxyServlet</servlet-class>
+    <servlet-class>oracle.adfinternal.view.faces.bi.renderkit.geoMap.servlet.MapProxyServlet</servlet-class>
   </servlet>
   <servlet>
     <servlet-name>adflibResources</servlet-name>
     <servlet-class>oracle.adf.library.webapp.ResourceServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GatewayServlet</servlet-name>
+    <servlet-class>oracle.adfinternal.view.faces.bi.renderkit.graph.FlashBridgeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
@@ -156,6 +160,10 @@
   <servlet-mapping>
     <servlet-name>adflibResources</servlet-name>
     <url-pattern>/adflib/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GatewayServlet</servlet-name>
+    <url-pattern>/flashbridge/*</url-pattern>
   </servlet-mapping>
   <mime-mapping>
     <extension>swf</extension>
