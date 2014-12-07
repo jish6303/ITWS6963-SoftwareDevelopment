@@ -19,7 +19,7 @@
                     <af:spacer width="10" height="25" id="pt_s1"/>
                     <af:panelGroupLayout id="pt_pgl2" layout="horizontal"
                                          inlineStyle="background-color:inherit;">
-                        <af:spacer width="10" height="10" id="pt_s2" inlineStyle="width:550px;"/>
+                        <af:spacer width="10" height="10" id="pt_s2" inlineStyle="width:520px;"/>
                         <af:outputLabel value="Welcome To HR System" id="pt_ol1"
                                         inlineStyle="color:rgb(148,0,0); font-family:Arial, Helvetica, sans-serif; font-size:22pt; font-weight:bolder;"/>
                     </af:panelGroupLayout>

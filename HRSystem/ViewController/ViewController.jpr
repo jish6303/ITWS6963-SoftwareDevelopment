@@ -181,17 +181,6 @@
       <value n="j2eeWebAppName" v="HRSystem-ViewController-webapp"/>
       <value n="j2eeWebContextRoot" v="HRSystem-ViewController-context-root"/>
    </hash>
-   <hash n="oracle.jdeveloper.runner.RunConfigurations">
-      <hash n="runConfigurationDefinitions">
-         <hash n="Default">
-            <value n="custom" v="false"/>
-            <value n="name" v="Default"/>
-         </hash>
-      </hash>
-      <list n="runConfigurationList">
-         <string v="Default"/>
-      </list>
-   </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
@@ -339,7 +328,7 @@
          <list n="libraryDefinitions">
             <hash>
                <list n="classPath">
-                  <url path="../../../../../Oracle/Middleware/modules/com.bea.core.weblogic.security.auth_1.1.0.0.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/C:/Oracle/Middleware/modules/com.bea.core.weblogic.security.auth_1.1.0.0.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Com.bea.core.weblogic.security.auth_1.1.0.0.jar"/>
@@ -348,7 +337,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../../../../Oracle/Middleware/modules/com.bea.core.weblogic.security.identity_1.1.2.1.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/C:/Oracle/Middleware/modules/com.bea.core.weblogic.security.identity_1.1.2.1.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Com.bea.core.weblogic.security.identity_1.1.2.1.jar"/>
@@ -357,7 +346,7 @@
             </hash>
             <hash>
                <list n="classPath">
-                  <url path="../../../../../Oracle/Middleware/wlserver_10.3/server/lib/wls-api.jar" jar-entry=""/>
+                  <url protocol="jar" path="file:/C:/Oracle/Middleware/wlserver_10.3/server/lib/wls-api.jar!/"/>
                </list>
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="Wls-api.jar"/>
@@ -637,8 +626,6 @@
             </hash>
             <value n="jspVersion" v="2.1"/>
             <value n="name" v="JSF Core"/>
-            <value n="runInEditor" v="true"/>
-            <value n="showInPalette" v="true"/>
             <value n="tldURL" v="@oracle.home@../oracle_common/modules/oracle.jsf_2.0.4/jsf-impl.jar!/META-INF/jsf_core.tld"/>
             <value n="URI" v="http://java.sun.com/jsf/core"/>
             <value n="version" v="2.0"/>
@@ -650,8 +637,6 @@
             </hash>
             <value n="jspVersion" v="2.1"/>
             <value n="name" v="JSF HTML"/>
-            <value n="runInEditor" v="true"/>
-            <value n="showInPalette" v="true"/>
             <value n="tldURL" v="@oracle.home@../oracle_common/modules/oracle.jsf_2.0.4/jsf-impl.jar!/META-INF/html_basic.tld"/>
             <value n="URI" v="http://java.sun.com/jsf/html"/>
             <value n="version" v="2.0"/>

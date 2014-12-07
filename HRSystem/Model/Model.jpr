@@ -229,7 +229,4 @@
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
    </hash>
-   <hash n="ResourceBundleOptions">
-      <value n="ADFRestricted" v="true"/>
-   </hash>
 </jpr:project>

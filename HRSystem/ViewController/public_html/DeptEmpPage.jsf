@@ -109,7 +109,7 @@
                         </f:facet>
                         <f:facet name="second">
                             <af:panelTabbed id="pt2">
-                                <af:showDetailItem text="showDetailItem 1" id="sdi3">
+                                <af:showDetailItem text="Employee Details" id="sdi3">
                                     <af:panelFormLayout id="pfl2" rows="5">
                                         <af:inputText value="#{bindings.EmployeeId.inputValue}"
                                                       label="#{bindings.EmployeeId.hints.label}"

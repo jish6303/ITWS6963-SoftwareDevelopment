@@ -76,7 +76,8 @@
                                                                     unselectedLabel="Your Job Role"
                                                                     shortDesc="#{bindings.Jobrole.hints.tooltip}"
                                                                     value="#{registrationBean.jobRole}"
-                                                                    required="#{bindings.Jobrole.hints.mandatory}">
+                                                                    required="#{bindings.Jobrole.hints.mandatory}"
+                                                                    requiredMessageDetail="Please select your job role">
                                                     <f:selectItems value="#{bindings.Jobrole.items}" id="si1"/>
                                                 </af:selectOneChoice>
                                             </af:panelLabelAndMessage>
@@ -119,7 +120,8 @@
                                                               showRequired="true"
                                                               value="#{registrationBean.answer}"
                                                               maximumLength="#{bindings.Securityanswer.hints.precision}"
-                                                              rows="1" autoComplete="off">
+                                                              rows="1" autoComplete="off"
+                                                              requiredMessageDetail="Please enter your Security Answer">
                                                     <f:validator binding="#{bindings.Securityanswer.validator}"/>
                                                 </af:inputText>
                                             </af:panelLabelAndMessage>
