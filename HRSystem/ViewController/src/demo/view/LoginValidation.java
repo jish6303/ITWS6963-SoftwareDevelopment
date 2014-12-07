@@ -9,6 +9,8 @@ public class LoginValidation {
     private String _password;
     private Connection conn;
     private Statement stmt;
+    
+    //This is a comment
 
 
     public void setUsername(String _username) {
